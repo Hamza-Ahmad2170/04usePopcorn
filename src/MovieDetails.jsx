@@ -36,7 +36,7 @@ function MovieDetails({ selectedId, onCloseMovie, onAddWatched, watched }) {
     setIsLoading(true);
     (async () => {
       const res = await fetch(
-        `http://www.omdbapi.com/?apikey=${apiKey}&i=${selectedId}`
+        `https://www.omdbapi.com/?apikey=${apiKey}&i=${selectedId}`
       );
       const data = await res.json();
       setMovie(data);
@@ -80,7 +80,7 @@ function MovieDetails({ selectedId, onCloseMovie, onAddWatched, watched }) {
     };
   }, [title]);
 
-useKey("escape", onCloseMovie)
+  useKey("escape", onCloseMovie);
 
   return (
     <div className="details">

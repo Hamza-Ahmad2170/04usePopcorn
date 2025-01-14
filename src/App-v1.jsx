@@ -61,11 +61,12 @@ export default function App() {
   const [movies, setMovies] = useState(tempMovieData);
   const [watched, setWatched] = useState(tempWatchedData);
 
-  fetch(`http://www.omdbapi.com/?apikey=${apiKey}&s=interstellar`).then((res) =>
-    res
-      .json()
-      .then((data) => console.log(data))
-      .catch((error) => console.error(error))
+  fetch(`https://www.omdbapi.com/?apikey=${apiKey}&s=interstellar`).then(
+    (res) =>
+      res
+        .json()
+        .then((data) => console.log(data))
+        .catch((error) => console.error(error))
   );
 
   return (
