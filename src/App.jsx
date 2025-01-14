@@ -14,8 +14,6 @@ import ErrorMessage from "./ErrorMessage";
 import useMovies from "./Custom hooks/useMovies";
 import useLocalStorageState from "./Custom hooks/useLocalStorageState";
 
-
-
 export default function App() {
   const [query, setQuery] = useState("");
   const [selectedId, setSelectedId] = useState(null);
